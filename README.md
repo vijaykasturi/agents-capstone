@@ -52,3 +52,28 @@ This project directly addresses the core themes of the Agents Intensive Capstone
 * Integration with **asynchronous operations** (like the MCP toolset for external content).
 
 ---
+
+## 💻 Technical Stack
+
+This project is built around the modern asynchronous Python ecosystem, leveraging Google's AI infrastructure and specialized libraries to create a robust agent system.
+
+| Component | Technology / Tool | Purpose in Project |
+| :--- | :--- | :--- |
+| **Agent Framework** | **Google Agent Development Kit (ADK)** | Core framework for agent definition, tool binding, and multi-agent orchestration. |
+| **Agent LLM** | **Gemini API** (or other Google LLM) | Powers the agents' reasoning, planning, and content generation (e.g., generating quiz questions). |
+| **Language** | **Python** (AsyncIO) | Primary development language, enabling efficient, non-blocking I/O operations for agent communication. |
+| **Tool Communication** | **Model Context Protocol (MCP)** | Used for standardizing communication between the ADK agents and external tools (like the Mind Map Generator). |
+| **Deployment & UI** | **FastAPI** / **Streamlit** (or similar) | Used to create the barebones web service API and a simple front-end interface for student interaction. |
+| **State Persistence** | **ADK Session Service** (Cloud Firestore/Database) | Stores the student's progress, mastery scores, and chat history persistently across sessions. |
+| **Data Storage** | **JSON/YAML** Files | Initial storage for structured syllabus data that the Mind Map Generator Tool reads. |
+
+## 🗓️ Capstone Timeline & Milestones
+
+This timeline outlines a phased approach, focusing on the core multi-agent and tool capabilities first, followed by integration and extension.
+
+| Phase | Milestone | Focus / Deliverable | Capstone Relevance |
+| :--- | :--- | :--- | :--- |
+| **Phase 1: Foundation (30%)** | **Agent Setup & Tool Binding** | Define the **Superior Agent** and **Subject Agent** classes. Implement the **Grade Calculator Tool** (a simple function) and bind it to the Subject Agent. Establish basic chat session with state management via the Session Service. | Multi-Agent Architecture, ADK Setup. |
+| **Phase 2: Core Functionality (40%)** | **Mind Mapping & Assessment Loop** | Implement the **Mind Map Generator Tool** to read syllabus data and output structured content. Implement the **Quiz Generation Tool** (LLM call). Demonstrate the Superior Agent dispatching a request that results in a quiz, grading, and a mastery score update. | Custom Tool Development, State Persistence. |
+| **Phase 3: Integration & UI (20%)** | **Barebones Web App & Demo** | Implement the `run_session` runner and wrap the agent in a simple **FastAPI** endpoint. Create a basic front-end (e.g., Streamlit) to interact with the API, showcasing the mind map output and progress tracking. | Scalability & User Interface. |
+| **Phase 4: Polish & Extension (10%)** | **Refinement & Extension Planning** | Final code cleanup, README completion, and documentation of the **Content Agent** and its planned **Video Generation Tool** (e.g., providing sample API calls and integration points). | Professionalism, Future Scalability. |
