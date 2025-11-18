@@ -9,7 +9,8 @@ The core deliverable is a barebones, scalable web application focused on **struc
 ## 🎯 Problem Statement
 
 Competitive exam preparation is often generic, rigid, and lacks personalized feedback on micro-topics. Students need a dynamic system that can:
-1.  Visually map complex syllabi to foundational concepts (Mind Map).
+
+1.  Visually map complex syllabus to foundational concepts (Mind Map).
 2.  Provide continuous assessment and calculate granular mastery scores.
 3.  Track incremental progress across various subject areas.
 
